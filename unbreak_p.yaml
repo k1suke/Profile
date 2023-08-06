@@ -1,3 +1,3 @@
 payload:
-  - DOMAIN,fflogs.com
-  - DOMAIN,rpglogs.cn
+  - DOMAIN-SUFFIX,fflogs.com
+  - DOMAIN-SUFFIX,rpglogs.cn
