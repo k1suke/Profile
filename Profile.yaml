@@ -63,16 +63,7 @@ proxy-providers:
 proxies: null
 proxy-groups:
 #分流分组
-  - name: ♻️ 节点选择
-    type: select
-    proxies:
-      - 🚀 手动切换
-      - DIRECT
-      - 🇭🇰 香港节点
-      - 🇯🇵 日本节点
-      - 🇨🇳 台湾节点
-      - 🇺🇲 美国节点
-      - 🇸🇬 狮城节点
+  - {name: ♻️ 节点选择, type: select, proxies: [🚀 手动切换, DIRECT, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇺🇲 美国节点, 🇸🇬 狮城节点]}
   - {name: 🚀 手动切换, <<: *a2}
   - {name: 🌏 全球加速, <<: *a3}
   - {name: 🍎 苹果服务, <<: *a3}
