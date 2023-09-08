@@ -30,8 +30,9 @@ dns:
     - "*.blzstatic.cn"
     - "*.battle.net"
   nameserver:        # 默认 DNS 服务
-    - 223.5.5.5
     - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
   fallback:          # 国外 DNS 服务器
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
@@ -73,7 +74,6 @@ proxy-groups:
   - {name: 🌌 谷歌服务, <<: *a3}
   - {name: 📟 电报消息, <<: *a3}
   - {name: 🐦 推特服务, <<: *a3}
-  - {name: 🎮 SteamCN, <<: *a3}
   - {name: 🎮 游戏平台, <<: *a3}
   - {name: 🐟 兜底分流, <<: *a3}
   
@@ -121,7 +121,7 @@ rules:
   - RULE-SET,Google,🌌 谷歌服务
   - RULE-SET,Telegram,📟 电报消息
   - RULE-SET,Twitter,🌏 全球加速
-  - RULE-SET,SteamCN,🎮 SteamCN
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,Game,🎮 游戏平台
   - RULE-SET,ProxyLite,🌏 全球加速
   - RULE-SET,ChinaIP,DIRECT
