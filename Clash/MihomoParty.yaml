@@ -1,4 +1,4 @@
-# 1002 ver02
+# 1002 ver03
 
 proxy-groups:
 #分流分组
@@ -17,7 +17,7 @@ proxy-groups:
 # 分流规则 
 rule-providers:
   Direct+:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/k1suke/Profile/refs/heads/main/Clash/Direct%2B.yaml ,                                     path: ./ruleset/Direct+.yaml        }
-  Proxy+:          {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://ghp.ci/https://raw.githubusercontent.com/k1suke/Profile/refs/heads/main/Clash/Proxy%2B.yaml ,                       path: ./ruleset/Proxy+.yaml         } 
+  Proxy+:          {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/k1suke/Profile/refs/heads/main/Clash/Proxy%2B.yaml ,                                      path: ./ruleset/Proxy+.yaml         } 
   Lan:             {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml ,                             path: ./ruleset/Lan.yaml            }
   Direct:          {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml ,                       path: ./ruleset/Direct.yaml         }
   Download:        {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml ,                   path: ./ruleset/Download.yaml       }
