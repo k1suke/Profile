@@ -47,7 +47,7 @@ rules:
   - RULE-SET,GlobalMedia,全球加速
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Github,美国节点
-  - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,Microsoft,美国节点
   - RULE-SET,Google,全球加速
   - RULE-SET,Telegram,全球加速
   - RULE-SET,Twitter,全球加速
