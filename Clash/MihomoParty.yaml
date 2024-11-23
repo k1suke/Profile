@@ -4,6 +4,7 @@ proxy-groups:
 #分流分组
   - {name: 手动切换, type: select, include-all: true, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/shadowrocket.png }
   - {name: 全球加速, type: select, proxies: [日本节点, 香港节点, 台湾节点, 狮城节点, 美国节点, 手动切换, DIRECT], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png }
+  - {name: 特殊网站, type: select, proxies: [日本节点, 香港节点, 台湾节点, 狮城节点, 美国节点, 手动切换, DIRECT], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Personal.png }
   - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png }
   - {name: 兜底分流, type: select, proxies: [全球加速, 日本节点, 香港节点, 台湾节点, 狮城节点, 美国节点, 手动切换, DIRECT], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png }
   
@@ -39,7 +40,7 @@ rule-providers:
 # 分流Policy 
 rules:
   - RULE-SET,Direct+,DIRECT
-  - RULE-SET,Proxy+,全球加速
+  - RULE-SET,Proxy+,特殊网站
   - RULE-SET,Direct,DIRECT
   - RULE-SET,Download,DIRECT
   - RULE-SET,OpenAi,美国节点
