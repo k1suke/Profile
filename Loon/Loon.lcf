@@ -61,26 +61,30 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 # 请勿修改远程CN REGION规则的排序甚至删除
 DOMAIN-SUFFIX,kwk7thgc.com,DIRECT
 DOMAIN-SUFFIX,kelee.one,DIRECT
-FINAL, 兜底后备策略
+FINAL,兜底策略
 
 [Remote Rule]
-https://rule.kelee.one/Loon/Telegram.lsr, policy = 兜底后备策略, tag = Telegram, enabled = true
-https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy = 新国手动策略, tag = TikTok, enabled = true
-https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy = 美国手动策略, tag = AI, enabled = true
-https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy = DIRECT, tag = Apple Account, enabled = true
-https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy = DIRECT, tag = App Store, enabled = false
-https://rule.kelee.one/Loon/GitHub.lsr, policy = 兜底后备策略, tag = GitHub, enabled = true
-https://rule.kelee.one/Loon/Netflix.lsr, policy = 新国手动策略, tag = Netflix, enabled = true
-https://rule.kelee.one/Loon/YouTube.lsr, policy = 兜底后备策略, tag = Youtube, enabled = true
-https://rule.kelee.one/Loon/Disney.lsr, policy = 香港手动策略, tag = Disney, enabled = true
-https://rule.kelee.one/Loon/Twitter.lsr, policy = 兜底后备策略, tag = Twitter, enabled = true
-https://rule.kelee.one/Loon/Facebook.lsr, policy = 兜底后备策略, tag = Facebook, enabled = true
-https://rule.kelee.one/Loon/Instagram.lsr, policy = 兜底后备策略, tag = Instagram, enabled = true
-https://rule.kelee.one/Loon/Spotify.lsr, policy = 香港手动策略, tag = Spotify, enabled = true
-https://rule.kelee.one/Loon/Google.lsr, policy = 兜底后备策略, tag = Google, enabled = true
-https://rule.kelee.one/Loon/OneDrive.lsr, policy = 兜底后备策略, tag = OneDrive, enabled = true
-https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER, policy = DIRECT, tag = LAN, enabled = true
-https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER, policy = DIRECT, tag = CN REGION, enabled = true
+https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy=DIRECT, tag=Apple Account, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=DIRECT, tag=App Store, enabled=true
+https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
+https://rule.kelee.one/Loon/SteamCN.lsr, policy=DIRECT, tag=SteamCN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=美国自动, tag=AI, enabled=true
+https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
+https://rule.kelee.one/Loon/Disney.lsr, policy=全球加速, tag=Disney, enabled=true
+https://rule.kelee.one/Loon/Facebook.lsr, policy=全球加速, tag=Facebook, enabled=true
+https://rule.kelee.one/Loon/GitHub.lsr, policy=美国自动, tag=GitHub, enabled=true
+https://rule.kelee.one/Loon/Google.lsr, policy=全球加速, tag=Google, enabled=true
+https://rule.kelee.one/Loon/Instagram.lsr, policy=全球加速, tag=Instagram, enabled=true
+https://rule.kelee.one/Loon/Netflix.lsr, policy=全球加速, tag=Netflix, enabled=true
+https://rule.kelee.one/Loon/OneDrive.lsr, policy=全球加速, tag=OneDrive, enabled=true
+https://rule.kelee.one/Loon/Spotify.lsr, policy=全球加速, tag=Spotify, enabled=true
+https://rule.kelee.one/Loon/Steam.lsr, policy=全球加速, tag=Steam, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=新国自动, tag=Telegram, enabled=true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=全球加速, tag=TikTok, enabled=true
+https://rule.kelee.one/Loon/Twitter.lsr, policy=全球加速, tag=Twitter, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=全球加速, tag=Youtube, enabled=true
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER, policy=DIRECT, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER, policy=DIRECT, tag=CN REGION, enabled=true
 
 [Host]
 
