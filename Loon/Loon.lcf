@@ -1,7 +1,7 @@
 # Loon 最小配置
-# Date: 2025-07-06 18:25:00
+# Date: 2025-09-01 00:00:44
 # Author: https://t.me/iKeLee
-# 更多的插件可以前往此处安装 https://github.com/luestr/ProxyResource/blob/main/README.md
+# 更多插件可前往 https://hub.kelee.one 安装
 
 [General]
 ip-mode = v4-only
@@ -16,9 +16,8 @@ wifi-access-http-port = 7222
 wifi-access-socks5-port = 7221
 allow-wifi-access = false
 interface-mode = auto
-test-timeout = 2
+test-timeout = 5
 disconnect-on-policy-change = false
-switch-node-after-failure-times = 3
 internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
 proxy-test-url = http://www.gstatic.com/generate_204
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
@@ -100,6 +99,7 @@ https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=全球加速, enab
 https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Beike_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Douyu_remove_ads.lpx, enabled=true
@@ -114,10 +114,10 @@ https://kelee.one/Tool/Loon/Lpx/Keep_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QuarkBrowser_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/MeetYou_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/KOOK_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MeiTu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/SF-Express_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TXDocs_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, enabled=true
