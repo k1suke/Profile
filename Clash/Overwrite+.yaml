@@ -1,2 +1,6 @@
 +rules:
-#  - DOMAIN-KEYWORD,libvio,香港节点
+  - DOMAIN-KEYWORD,ddys,DIRECT
+  - DOMAIN-SUFFIX,diemoe.net,DIRECT
+  - DOMAIN-SUFFIX,smedi.com,DIRECT
+  - DOMAIN-SUFFIX,ciyuancheng.net,DIRECT
+  - DOMAIN-KEYWORD,libvio,DIRECT
