@@ -1,10 +1,10 @@
-+rules:
- - DOMAIN-KEYWORD,ddys,DIRECT
- - DOMAIN-KEYWORD,libvio,DIRECT
- - DOMAIN-KEYWORD,hanime1,香港节点
- - DOMAIN-KEYWORD,hembed,香港节点
- - DOMAIN-SUFFIX,macat.vip,DIRECT
- - DOMAIN-SUFFIX,diemoe.net,DIRECT
- - DOMAIN-SUFFIX,smedi.com,DIRECT
- - DOMAIN-SUFFIX,ciyuancheng.net,DIRECT
- - DOMAIN-SUFFIX,bangumi.tv,DIRECT
+#+rules:
+# - DOMAIN-KEYWORD,ddys,DIRECT
+# - DOMAIN-KEYWORD,libvio,DIRECT
+# - DOMAIN-KEYWORD,hanime1,香港节点
+# - DOMAIN-KEYWORD,hembed,香港节点
+# - DOMAIN-SUFFIX,macat.vip,DIRECT
+# - DOMAIN-SUFFIX,diemoe.net,DIRECT
+# - DOMAIN-SUFFIX,smedi.com,DIRECT
+# - DOMAIN-SUFFIX,ciyuancheng.net,DIRECT
+# - DOMAIN-SUFFIX,bangumi.tv,DIRECT
