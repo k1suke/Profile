@@ -1,4 +1,4 @@
-# 0920 ver01
+# 251004 ver01
 
 #分组
 proxy-groups:
@@ -16,6 +16,8 @@ proxy-groups:
 
 #分流规则 
 rule-providers:
+ Direct+:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/k1suke/Profile/main/Clash/Direct%2B.yaml, path: ./ruleset/Direct%2B.yaml }
+ Hknode+:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/k1suke/Profile/main/Clash/Hknode%2B.yaml, path: ./ruleset/Hknode%2B.yaml }
  AdobeActivation: {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdobeActivation/AdobeActivation.yaml, path: ./ruleset/AdobeActivation.yaml }
  Apple:           {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml, path: ./ruleset/Apple.yaml }
  Download:        {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml, path: ./ruleset/Download.yaml }
@@ -36,6 +38,8 @@ rule-providers:
 #分流Policy 
 rules:
  - RULE-SET,AdobeActivation,REJECT
+ - RULE-SET,Direct+,DIRECT
+ - RULE-SET,Hknode+,香港节点
  - RULE-SET,Apple,DIRECT
  - RULE-SET,Download,DIRECT
  - RULE-SET,GameDownloadCN,DIRECT
@@ -53,6 +57,7 @@ rules:
  - RULE-SET,Lan,DIRECT
  - GEOIP,CN,DIRECT
  - MATCH,兜底分流
+
 
 
 
