@@ -1,5 +1,5 @@
 # Loon 最小配置
-# Date: 2025-09-08 22:34:27
+# Date: 2025-10-25 22:07:06
 # Author: https://t.me/iKeLee
 # 更多插件可前往 https://hub.kelee.one 安装
 
@@ -41,11 +41,11 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 全球加速 = select,日本自动,香港自动,台湾自动,美国自动,新国自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 哔哩哔哩 = select,DIRECT,香港自动,台湾自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png
 兜底策略 = select,DIRECT,全球加速,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
-日本自动 = url-test,日本节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-香港自动 = url-test,香港节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾自动 = url-test,台湾节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-美国自动 = url-test,美国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-新国自动 = url-test,新国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+日本自动 = url-test,日本节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+香港自动 = url-test,香港节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾自动 = url-test,台湾节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+美国自动 = url-test,美国节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+新国自动 = url-test,新国节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 
 [Rule]
 # Local Rule
