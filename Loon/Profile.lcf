@@ -1,0 +1,101 @@
+# Loon 自动配置 - 此配置文件自动选择网络时延最低的节点，全程无需人工干预，完全自动化。
+# Date: 2025-11-08 00:21:37
+# Author: https://t.me/iKeLee
+# 更多插件可前往 https://hub.kelee.one 安装
+
+[General]
+ip-mode=v4-only
+ipv6-vif=off
+dns-server=system
+sni-sniffing=true
+disable-stun=true
+dns-reject-mode=LoopbackIP
+domain-reject-mode=DNS
+udp-fallback-mode=REJECT
+wifi-access-http-port=7222
+wifi-access-socks5-port=7221
+allow-wifi-access=false
+interface-mode=auto
+test-timeout=5
+disconnect-on-policy-change=false
+internet-test-url=http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url=http://www.gstatic.com/generate_204
+resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url=https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url=https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
+bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+
+[Proxy]
+
+[Remote Proxy]
+
+[Remote Filter]
+日本节点 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$"
+香港节点 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$"
+台湾节点 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$"
+美国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$"
+新国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$"
+
+[Proxy Group]
+全球加速 = select,日本自动,香港自动,台湾自动,美国自动,新国自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+哔哩哔哩 = select,DIRECT,香港自动,台湾自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png
+兜底策略 = select,DIRECT,全球加速,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+日本自动 = url-test,日本节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+香港自动 = url-test,香港节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾自动 = url-test,台湾节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+美国自动 = url-test,美国节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+新国自动 = url-test,新国节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+
+[Rule]
+# 当配置文件中没有任何有效策略组时，Loon将使用内置的PROXY策略组
+# 当配置文件中存在有效的策略组时，内置的PROXY策略组将不再允许被调用，仅可使用用户配置的策略组
+# 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
+# 请勿修改远程CN REGION规则的排序甚至删除
+DOMAIN,dns.weixin.qq.com,DIRECT
+DOMAIN,dns.weixin.qq.com.cn,DIRECT
+DOMAIN-SUFFIX,kelee.one,DIRECT
+FINAL,兜底策略
+
+[Remote Rule]
+https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy=DIRECT, tag=Apple Account, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=DIRECT, tag=App Store, enabled=true
+https://rule.kelee.one/Loon/SteamCN.lsr, policy=DIRECT, tag=SteamCN, enabled=true
+https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=全球加速, tag=AI, enabled=true
+https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
+https://rule.kelee.one/Loon/GitHub.lsr, policy=全球加速, tag=GitHub, enabled=true
+https://rule.kelee.one/Loon/Google.lsr, policy=全球加速, tag=Google, enabled=true
+https://rule.kelee.one/Loon/Instagram.lsr, policy=全球加速, tag=Instagram, enabled=true
+https://rule.kelee.one/Loon/OneDrive.lsr, policy=全球加速, tag=OneDrive, enabled=true
+https://rule.kelee.one/Loon/Steam.lsr, policy=全球加速, tag=Steam, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=全球加速, tag=Telegram, enabled=true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=全球加速, tag=TikTok, enabled=true
+https://rule.kelee.one/Loon/Twitter.lsr, policy=全球加速, tag=Twitter, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=全球加速, tag=Youtube, enabled=true
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
+
+[Host]
+iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
+updates.cdn-apple.com = updates.cdn-apple.com.download.ks-cdn.com
+
+[Rewrite]
+
+[Script]
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=兜底策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, enabled=false
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=兜底策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=兜底策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=兜底策略, enabled=true
+
+[Mitm]
+hostname=
+ca-p12=
+ca-passphrase=
+skip-server-cert-verify=false
