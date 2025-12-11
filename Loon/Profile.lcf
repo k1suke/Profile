@@ -52,33 +52,18 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 # 当配置文件中存在有效的策略组时，内置的PROXY策略组将不再允许被调用，仅可使用用户配置的策略组
 # 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
 # 请勿修改远程CN REGION规则的排序甚至删除
-DOMAIN,dns.weixin.qq.com,DIRECT
-DOMAIN,dns.weixin.qq.com.cn,DIRECT
-DOMAIN-SUFFIX,kelee.one,DIRECT
 FINAL,兜底策略
 
 [Remote Rule]
-https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy=DIRECT, tag=Apple Account, enabled=true
-https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=DIRECT, tag=App Store, enabled=true
-https://rule.kelee.one/Loon/SteamCN.lsr, policy=DIRECT, tag=SteamCN, enabled=true
-https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
-https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=全球加速, tag=AI, enabled=true
+https://rule.kelee.one/Loon/Apple.lsr, policy=DIRECT, tag=Apple, enabled=true
+https://rule.kelee.one/Loon/AppleID.lsr, policy=DIRECT, tag=AppleID, enabled=true
+https://rule.kelee.one/Loon/AppStore.lsr, policy=DIRECT, tag=AppStore, enabled=true
+https://rule.kelee.one/Loon/iCloud.lsr, policy=DIRECT, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
-https://rule.kelee.one/Loon/GitHub.lsr, policy=全球加速, tag=GitHub, enabled=true
-https://rule.kelee.one/Loon/Google.lsr, policy=全球加速, tag=Google, enabled=true
-https://rule.kelee.one/Loon/Instagram.lsr, policy=全球加速, tag=Instagram, enabled=true
-https://rule.kelee.one/Loon/OneDrive.lsr, policy=全球加速, tag=OneDrive, enabled=true
-https://rule.kelee.one/Loon/Steam.lsr, policy=全球加速, tag=Steam, enabled=true
-https://rule.kelee.one/Loon/Telegram.lsr, policy=全球加速, tag=Telegram, enabled=true
-https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=全球加速, tag=TikTok, enabled=true
-https://rule.kelee.one/Loon/Twitter.lsr, policy=全球加速, tag=Twitter, enabled=true
-https://rule.kelee.one/Loon/YouTube.lsr, policy=全球加速, tag=Youtube, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
 [Host]
-iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
-updates.cdn-apple.com = updates.cdn-apple.com.download.ks-cdn.com
 
 [Rewrite]
 
@@ -88,11 +73,6 @@ updates.cdn-apple.com = updates.cdn-apple.com.download.ks-cdn.com
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=兜底策略, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, enabled=false
-https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=兜底策略, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=兜底策略, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=兜底策略, enabled=true
 
 [Mitm]
 hostname=
