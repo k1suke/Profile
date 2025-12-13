@@ -6,7 +6,7 @@
 [General]
 ip-mode = v4-only
 ipv6-vif = off
-dns-server = system,119.29.29.29,223.5.5.5,8.8.8.8
+dns-server = system
 sni-sniffing = true
 disable-stun = true
 dns-reject-mode = LoopbackIP
@@ -61,12 +61,13 @@ https://rule.kelee.one/Loon/AppStore.lsr, policy=DIRECT, tag=AppStore, enabled=t
 https://rule.kelee.one/Loon/iCloud.lsr, policy=DIRECT, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
-https://rule.kelee.one/Loon/Google.lsr, policy=全球加速, tag=Google, enabled=true
 https://rule.kelee.one/Loon/TikTok.lsr, policy=全球加速, tag=TikTok, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
 [Host]
+iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
+updates.cdn-apple.com = updates.cdn-apple.com.download.ks-cdn.com
 
 [Rewrite]
 
