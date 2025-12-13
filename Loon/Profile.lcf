@@ -4,27 +4,27 @@
 # 更多插件可前往 https://hub.kelee.one 安装
 
 [General]
-ip-mode=v4-only
-ipv6-vif=off
-dns-server=system
-sni-sniffing=true
-disable-stun=true
-dns-reject-mode=LoopbackIP
-domain-reject-mode=DNS
-udp-fallback-mode=REJECT
-wifi-access-http-port=7222
-wifi-access-socks5-port=7221
-allow-wifi-access=false
-interface-mode=auto
-test-timeout=5
-disconnect-on-policy-change=false
-internet-test-url=http://connectivitycheck.platform.hicloud.com/generate_204
-proxy-test-url=http://www.gstatic.com/generate_204
-resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
-geoip-url=https://geodata.kelee.one/Country-Masaiki.mmdb
-ipasn-url=https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-skip-proxy=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
-bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+ip-mode = v4-only
+ipv6-vif = off
+dns-server = system,119.29.29.29,223.5.5.5,8.8.8.8
+sni-sniffing = true
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 5
+disconnect-on-policy-change = false
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 
 [Proxy]
 
@@ -41,11 +41,11 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 全球加速 = select,日本自动,香港自动,台湾自动,美国自动,新国自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 哔哩哔哩 = select,DIRECT,香港自动,台湾自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png
 兜底策略 = select,DIRECT,全球加速,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
-日本自动 = url-test,日本节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-香港自动 = url-test,香港节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾自动 = url-test,台湾节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-美国自动 = url-test,美国节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-新国自动 = url-test,新国节点,interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+日本自动 = url-test,日本节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+香港自动 = url-test,香港节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾自动 = url-test,台湾节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+美国自动 = url-test,美国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+新国自动 = url-test,新国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 
 [Rule]
 # 当配置文件中没有任何有效策略组时，Loon将使用内置的PROXY策略组
@@ -59,7 +59,9 @@ https://rule.kelee.one/Loon/Apple.lsr, policy=DIRECT, tag=Apple, enabled=true
 https://rule.kelee.one/Loon/AppleID.lsr, policy=DIRECT, tag=AppleID, enabled=true
 https://rule.kelee.one/Loon/AppStore.lsr, policy=DIRECT, tag=AppStore, enabled=true
 https://rule.kelee.one/Loon/iCloud.lsr, policy=DIRECT, tag=iCloud, enabled=true
+https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
+https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=全球加速, tag=TikTok, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
@@ -70,12 +72,52 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGIO
 [Script]
 
 [Plugin]
+https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Beike_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Dewu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TaobaoTravel_remove_ads.lpx, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/FKTG.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Google.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/HUPU_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JDWaimai_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Keep_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuarkBrowser_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MeiTu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MeetYou_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/AutoHome_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/skip-proxy.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taopiaopiao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TXDocs_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/CosmosPodcast_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/SafetyHome_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=兜底策略, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=兜底策略, pin=true, enabled=true
 
 [Mitm]
-hostname=
+hostname =
 ca-p12=
 ca-passphrase=
-skip-server-cert-verify=false
+skip-server-cert-verify = false
