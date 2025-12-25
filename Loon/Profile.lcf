@@ -59,8 +59,9 @@ https://rule.kelee.one/Loon/Apple.lsr, policy=DIRECT, tag=Apple, enabled=true
 https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
 https://rule.kelee.one/Loon/GlobalMedia.lsr, policy=全球加速, tag=GlobalMedia, enabled=true
-https://rule.kelee.one/Loon/Telegram.lsr, policy=全球加速, tag=Telegram, enabled=true
 https://rule.kelee.one/Loon/Proxy.lsr, policy=全球加速, tag=Proxy, enabled=true
+https://rule.kelee.one/Loon/Steam.lsr, policy=全球加速, tag=Steam, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=全球加速, tag=Telegram, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
