@@ -1,24 +1,23 @@
-# 251004 ver02
+# 260310 ver01
 
 #分组
 proxy-groups:
 #分流分组
  - {name: 手动切换, type: select, include-all: true, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/shadowrocket.png }
- - {name: 全球加速, type: select, proxies: [Fallback, 日本节点, 香港节点, 台湾节点, 狮城节点, 美国节点, 手动切换, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png }
+ - {name: 全球加速, type: select, proxies: [Fallback, 香港节点, 日本节点, 台湾节点, 狮城节点, 美国节点, 手动切换, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png }
  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png }
  - {name: 兜底分流, type: select, proxies: [全球加速, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png }
 #节点分组
- - {name: Fallback, type: fallback, proxies: [日本节点, 香港节点, 台湾节点, 狮城节点, 美国节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png }
+ - {name: Fallback, type: fallback, proxies: [香港节点, 日本节点, 台湾节点, 狮城节点, 美国节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png }
  - {name: 香港节点, type: url-test, include-all: true, interval: 300, tolerance: 50,  filter: "港|HK|(?i)Hong", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png }             
  - {name: 日本节点, type: url-test, include-all: true, interval: 300, tolerance: 50,  filter: "日|东京|JP|(?i)Japan", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png }
  - {name: 台湾节点, type: url-test, include-all: true, interval: 300, tolerance: 50,  filter: "台|湾|TW|(?i)Taiwan", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png }
- - {name: 美国节点, type: url-test, include-all: true, interval: 300, tolerance: 50,  filter: "美|US|(?i)States|American", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
  - {name: 狮城节点, type: url-test, include-all: true, interval: 300, tolerance: 50,  filter: "新|坡|SG|(?i)Singapore", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png }
+ - {name: 美国节点, type: url-test, include-all: true, interval: 300, tolerance: 50,  filter: "美|US|(?i)States|American", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
 
 #分流规则 
 rule-providers:
  Direct+:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/k1suke/Profile/main/Clash/Direct%2B.yaml, path: ./ruleset/Direct%2B.yaml }
- Hknode+:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/k1suke/Profile/main/Clash/Hknode%2B.yaml, path: ./ruleset/Hknode%2B.yaml }
  AdobeActivation: {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdobeActivation/AdobeActivation.yaml, path: ./ruleset/AdobeActivation.yaml }
  Apple:           {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml, path: ./ruleset/Apple.yaml }
  Download:        {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml, path: ./ruleset/Download.yaml }
@@ -39,7 +38,6 @@ rule-providers:
 #分流Policy 
 rules:
  - RULE-SET,Direct+,DIRECT
- - RULE-SET,Hknode+,香港节点
  - RULE-SET,AdobeActivation,REJECT
  - RULE-SET,Apple,DIRECT
  - RULE-SET,Download,DIRECT
@@ -58,6 +56,7 @@ rules:
  - RULE-SET,Lan,DIRECT
  - GEOIP,CN,DIRECT
  - MATCH,兜底分流
+
 
 
 
