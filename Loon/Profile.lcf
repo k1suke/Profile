@@ -38,9 +38,10 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 美国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$"
 
 [Proxy Group]
-全球加速 = fallback,香港自动,日本自动,台湾自动,新国自动,美国自动,interval = 600,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+全球加速 = select,Fallback,香港自动,日本自动,台湾自动,新国自动,美国自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 哔哩哔哩 = select,DIRECT,香港自动,台湾自动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png
 兜底策略 = select,DIRECT,全球加速,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+Fallback = fallback,香港自动,日本自动,台湾自动,新国自动,美国自动,interval = 600,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png
 日本自动 = url-test,日本节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
 香港自动 = url-test,香港节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 台湾自动 = url-test,台湾节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
