@@ -75,6 +75,8 @@ updates.cdn-apple.com = updates.cdn-apple.com.download.ks-cdn.com
 [Script]
 
 [Plugin]
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/skip-proxy.lpx, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/FKTG.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/SafetyHome_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
