@@ -60,6 +60,7 @@ FINAL, 兜底策略
 [Remote Rule]
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=全球加速, tag=Telegram, enabled=true
+https://rule.kelee.one/Loon/Proxy.lsr, policy=全球加速, tag=Proxy, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
