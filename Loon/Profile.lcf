@@ -1,4 +1,4 @@
-#26040101
+#26040301
 
 # Loon 自动配置 - 此配置文件自动选择网络时延最低的节点，全程无需人工干预，完全自动化。
 # Date: 2025-11-08 00:21:37
@@ -78,8 +78,8 @@ https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Beike_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Dewu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TaobaoTravel_remove_ads.lpx, enabled=true
