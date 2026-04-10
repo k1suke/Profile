@@ -1,4 +1,4 @@
-#26040801
+#26041001
 
 # Loon 自动配置 - 此配置文件自动选择网络时延最低的节点，全程无需人工干预，完全自动化。
 # Date: 2025-11-08 00:21:37
@@ -67,8 +67,6 @@ https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enable
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
 [Host]
-iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
-updates.cdn-apple.com = updates.cdn-apple.com.download.ks-cdn.com
 
 [Rewrite]
 
