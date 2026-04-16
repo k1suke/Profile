@@ -1,4 +1,4 @@
-#26041001
+#26041601
 
 # Loon 自动配置 - 此配置文件自动选择网络时延最低的节点，全程无需人工干预，完全自动化。
 # Date: 2025-11-08 00:21:37
@@ -62,6 +62,7 @@ https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=美国自动, tag=AI, enabled=tru
 https://rule.kelee.one/Loon/BiliBili.lsr, policy=哔哩哔哩, tag=BiliBili, enabled=true
 https://rule.kelee.one/Loon/Steam.lsr, policy=全球加速, tag=Steam, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=全球加速, tag=Telegram, enabled=true
+https://rule.kelee.one/Loon/WeChat.lsr, policy=DIRECT, tag=WeChat, enabled=true
 https://rule.kelee.one/Loon/Proxy.lsr, policy=全球加速, tag=Proxy, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
